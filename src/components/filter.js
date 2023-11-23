@@ -36,7 +36,7 @@ function Filter() {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/properties/filter');
+            const response = await axios.get('https://reunion-backend-production.up.railway.app/api/properties/filter');
             setData(response.data.data)
 
         } catch (error) {
@@ -47,7 +47,7 @@ function Filter() {
 
     const fetchDatafilter = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/api/properties/filter?fare=${rate}&city=${city}&availableFrom=${date}&type=${type}`);
+            const response = await axios.get(`https://reunion-backend-production.up.railway.app/api/properties/filter?fare=${rate}&city=${city}&availableFrom=${date}&type=${type}`);
             setData(response.data.data)
             console.log(response)
 
